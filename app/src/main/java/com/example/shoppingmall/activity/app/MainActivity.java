@@ -1,4 +1,4 @@
-package com.example.shoppingmall.activity;
+package com.example.shoppingmall.activity.app;
 
 import android.os.Bundle;
 import android.widget.FrameLayout;
