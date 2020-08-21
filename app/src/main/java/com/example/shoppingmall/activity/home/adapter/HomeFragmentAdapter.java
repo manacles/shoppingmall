@@ -1,6 +1,7 @@
 package com.example.shoppingmall.activity.home.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Handler;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -18,6 +19,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.shoppingmall.R;
+import com.example.shoppingmall.activity.app.GoodsInfoActivity;
 import com.example.shoppingmall.activity.home.bean.HomeResultBean;
 import com.example.shoppingmall.activity.utils.Constants;
 import com.youth.banner.Banner;
@@ -202,10 +204,19 @@ public class HomeFragmentAdapter extends RecyclerView.Adapter {
                 @Override
                 public void OnBannerClick(Object data, int position) {
                     Toast.makeText(context, "点击了第" + position + "个，" + banner_info.get(position).getValue().getUrl(), Toast.LENGTH_SHORT).show();
+                    startGoodsInfoActivity();
                 }
             });
 
         }
+    }
+
+    /**
+     * 跳转到商品详情页面
+     */
+    private void startGoodsInfoActivity() {
+        Intent intent = new Intent(context, GoodsInfoActivity.class);
+        context.startActivity(intent);
     }
 
     class ChannelViewHolder extends RecyclerView.ViewHolder {
@@ -304,6 +315,7 @@ public class HomeFragmentAdapter extends RecyclerView.Adapter {
                 @Override
                 public void OnItemClick(int position) {
                     Toast.makeText(context, position + "--" + seckill_info.getList().get(position).getName(), Toast.LENGTH_SHORT).show();
+                    startGoodsInfoActivity();
                 }
             });
 
@@ -359,6 +371,7 @@ public class HomeFragmentAdapter extends RecyclerView.Adapter {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                     Toast.makeText(context, position + ":" + resultBean.getRecommend_info().get(position).getName(), Toast.LENGTH_SHORT).show();
+                    startGoodsInfoActivity();
                 }
             });
 
@@ -392,6 +405,7 @@ public class HomeFragmentAdapter extends RecyclerView.Adapter {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                     Toast.makeText(context, position + ":" + resultBean.getHot_info().get(position).getName(), Toast.LENGTH_SHORT).show();
+                    startGoodsInfoActivity();
                 }
             });
 
