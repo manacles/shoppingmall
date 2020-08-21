@@ -6,6 +6,10 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.shoppingmall.activity.base.BaseFragment;
+import com.example.shoppingmall.activity.cart.utils.CartStorage;
+import com.example.shoppingmall.activity.home.bean.GoodsBean;
+
+import java.util.List;
 
 import static android.content.ContentValues.TAG;
 
@@ -30,5 +34,13 @@ public class CartFragment extends BaseFragment {
         super.initData();
         Log.e(TAG, "initData: 购物车的Fragment的数据被初始化了");
         textView.setText("我是购物车的内容");
+
+        List<GoodsBean> goodsBeanList = CartStorage.getInstance().getAllData();
+        if (goodsBeanList!=null){
+            for (int i = 0; i < goodsBeanList.size(); i++) {
+                Log.e(TAG, "initData: " + goodsBeanList.get(i).toString());
+            }
+        }
+
     }
 }

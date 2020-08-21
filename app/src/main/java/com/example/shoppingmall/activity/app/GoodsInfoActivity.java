@@ -17,6 +17,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
 import com.example.shoppingmall.R;
+import com.example.shoppingmall.activity.cart.utils.CartStorage;
 import com.example.shoppingmall.activity.home.adapter.HomeFragmentAdapter;
 import com.example.shoppingmall.activity.home.bean.GoodsBean;
 import com.example.shoppingmall.activity.utils.Constants;
@@ -125,7 +126,8 @@ public class GoodsInfoActivity extends AppCompatActivity {
                 initMoreMenu();
                 break;
             case R.id.btn_good_info_addcart:
-                Toast.makeText(this, "添加到购物车", Toast.LENGTH_SHORT).show();
+                CartStorage.getInstance().addData(goodsBean);
+                Toast.makeText(this, "添加成功", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.tv_good_info_callcenter:
                 Toast.makeText(this, "联系客服", Toast.LENGTH_SHORT).show();
