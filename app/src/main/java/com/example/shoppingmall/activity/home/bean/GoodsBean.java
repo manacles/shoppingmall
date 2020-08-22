@@ -11,6 +11,15 @@ public class GoodsBean implements Serializable {
     private String name;
     private String product_id;
     private int number = 1;
+    private boolean isSelected = true;
+
+    public boolean isSelected() {
+        return isSelected;
+    }
+
+    public void setSelected(boolean selected) {
+        isSelected = selected;
+    }
 
     public int getNumber() {
         return number;
@@ -60,6 +69,7 @@ public class GoodsBean implements Serializable {
                 ", name='" + name + '\'' +
                 ", product_id='" + product_id + '\'' +
                 ", number=" + number +
+                ", isSelected=" + isSelected +
                 '}';
     }
 }
