@@ -58,7 +58,7 @@
                     android:textColor="#f00"
                     android:textSize="14sp" />
 
-                <com.example.shoppingmall.activity.cart.view.AddSubtractView
+                <com.example.shoppingmall.cart.view.AddSubtractView
                     android:id="@+id/addSubtractView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />

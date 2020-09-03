@@ -53,7 +53,7 @@
               android:layout_height="match_parent"
               android:orientation="vertical">
 
-              <com.example.shoppingmall.activity.view.ScrollViewContainer
+              <com.example.shoppingmall.view.ScrollViewContainer
                   android:layout_width="match_parent"
                   android:layout_height="match_parent">
 
@@ -190,7 +190,7 @@
 
                   </ScrollView>
 
-              </com.example.shoppingmall.activity.view.ScrollViewContainer>
+              </com.example.shoppingmall.view.ScrollViewContainer>
           </LinearLayout>
 
           <LinearLayout
